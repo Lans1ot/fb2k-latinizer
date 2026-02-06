@@ -23,3 +23,5 @@
 * Mac\ / foo_sample.xcodeproj / foo_sample.xcworkspace：macOS 侧工程示例
 
 编译配置方式与 SDK 的 foo_sample 完全一致，按原工程与配置直接编译即可。
+
+![](./asset/image.png)
