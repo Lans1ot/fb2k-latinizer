@@ -1,0 +1,157 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+// Main preferences page layout: API endpoint + prompt + DB path.
+IDD_PREFS_MAIN DIALOGEX 0, 0, 332, 180
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    LTEXT           "API URL:",IDC_STATIC,8,10,44,8
+    EDITTEXT        IDC_API_URL,60,8,260,12,ES_AUTOHSCROLL
+    LTEXT           "API Key:",IDC_STATIC,8,26,44,8
+    EDITTEXT        IDC_API_KEY,60,24,260,12,ES_AUTOHSCROLL
+    LTEXT           "Model:",IDC_STATIC,8,42,44,8
+    EDITTEXT        IDC_MODEL,60,40,260,12,ES_AUTOHSCROLL
+    LTEXT           "DB Path:",IDC_STATIC,8,58,44,8
+    EDITTEXT        IDC_DB_PATH,60,56,260,12,ES_AUTOHSCROLL
+    LTEXT           "Prompt:",IDC_STATIC,8,74,44,8
+    EDITTEXT        IDC_PROMPT,60,72,260,80,ES_AUTOVSCROLL | ES_MULTILINE | WS_VSCROLL
+    LTEXT           "Use {title} and {album} tokens in the prompt.",IDC_STATIC,60,156,260,8
+END
+
+// Cache management page layout: list + edit fields + maintenance buttons.
+IDD_PREFS_CACHE DIALOGEX 0, 0, 360, 190
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    LTEXT           "Search:",IDC_STATIC,8,8,34,8
+    EDITTEXT        IDC_CACHE_SEARCH,48,6,220,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Find",IDC_CACHE_FIND,276,6,36,12
+    CONTROL         "",IDC_CACHE_LIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,8,22,344,76
+    LTEXT           "Kind:",IDC_STATIC,8,104,26,8
+    EDITTEXT        IDC_CACHE_KIND,40,102,60,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Hash:",IDC_STATIC,110,104,26,8
+    EDITTEXT        IDC_CACHE_HASH,140,102,140,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Refresh",IDC_CACHE_REFRESH,286,100,66,14
+    LTEXT           "Title Latin:",IDC_STATIC,8,120,46,8
+    EDITTEXT        IDC_CACHE_TITLE,60,118,292,12,ES_AUTOHSCROLL
+    LTEXT           "Album Latin:",IDC_STATIC,8,136,54,8
+    EDITTEXT        IDC_CACHE_ALBUM,60,134,292,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Save",IDC_CACHE_SAVE,8,154,50,14
+    PUSHBUTTON      "Delete",IDC_CACHE_DELETE,66,154,50,14
+    PUSHBUTTON      "Clear All",IDC_CACHE_CLEAR,124,154,58,14
+    LTEXT           "Edits only update the cache; no file tags are changed.",IDC_STATIC,8,172,340,8
+END
+
+// Manual test page layout: lets you run a one-off API request and see raw response.
+IDD_PREFS_TEST DIALOGEX 0, 0, 332, 220
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    LTEXT           "Title:",IDC_STATIC,8,10,28,8
+    EDITTEXT        IDC_TEST_TITLE,50,8,270,12,ES_AUTOHSCROLL
+    LTEXT           "Album:",IDC_STATIC,8,26,28,8
+    EDITTEXT        IDC_TEST_ALBUM,50,24,270,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Test",IDC_TEST_RUN,8,42,40,14
+    EDITTEXT        IDC_TEST_OUTPUT,8,60,312,50,ES_AUTOVSCROLL | ES_MULTILINE | WS_VSCROLL | ES_READONLY
+    LTEXT           "Raw Response:",IDC_STATIC,8,114,60,8
+    EDITTEXT        IDC_TEST_RAW,8,124,312,88,ES_AUTOVSCROLL | ES_MULTILINE | WS_VSCROLL | ES_READONLY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PREFS_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 325
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_PREFS_CACHE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 353
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_PREFS_TEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 325
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
