@@ -1,32 +1,11 @@
-This component demonstrates:
-* main.cpp :
-  * Declaring your component's version information.
-* input_raw.cpp :
-  * Declaring your own "input" classes for decoding additional audio file formats.
-  * Calling file system services.
-* preferences.cpp :
-  * Declaring your configuration variables.
-  * Creating preferences pages using simple WTL dialogs.
-  * Declaring advanced preferences entries.
-* initquit.cpp :
-  * Sample initialization/shutdown callback service.
-* dsp.cpp :
-  * Sample DSP.
-* contextmenu.cpp :
-  * Sample context menu command.
-* decode.cpp :
-  * Getting PCM data from arbitrary audio files.
-  * Use of the threaded_process API to easily run time-consuming tasks in worker threads with progress dialogs.
-* mainmenu.cpp :
-  * Sample main menu command
-* playback_state.cpp :
-  * Use of playback callbacks.
-  * Use of playback control.
-* ui_element.cpp : 
-  * Simple UI Element implementation.
-* rating.cpp
-  * Minimal rating+comment implementation using metadb_index_client.
-  * Present your data via title formatting using metadb_display_field_provider.
-  * Present your data in the properties dialog using track_property_provider.
-  * Utility menu items.
-  * Basic use of stream formatters.
+本组件基于 foobar2000 SDK 自带的 foo_sample 改造，使用 vibe coding 完成。
+
+已实现功能：
+* 将曲目标题与专辑名拉丁化（仅保留 A-Z/0-9 与空格），支持中/日文的拼音/罗马音转换
+* 通过右键菜单批量生成拉丁化结果，并刷新元数据
+* 提供清理功能：清空当前选中条目的拉丁化结果（全清/仅标题/仅专辑）
+* 内置缓存数据库（默认保存在 profile 目录），避免重复请求
+* 暴露标题格式字段：%foo_latin_title% 与 %foo_latin_album%
+* 首选项页面可配置 API URL / API Key / 模型 / Prompt / 缓存路径，并提供测试入口
+
+编译配置方式与 SDK 的 foo_sample 完全一致，按原工程与配置直接编译即可。
