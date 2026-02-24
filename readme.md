@@ -16,12 +16,6 @@
 * foo_sample.rc / resource.h：资源与字符串定义
 * foo_sample.sln / foo_sample.vcxproj：工程与编译配置
 
-项目布局（关键目录）：
-* foo_sample\：示例工程源文件目录（本组件主要代码在根目录下）
-* packages\：NuGet 依赖
-* x64\ / Release\ / Release FB2K\：本地构建输出目录
-* Mac\ / foo_sample.xcodeproj / foo_sample.xcworkspace：macOS 侧工程示例
-
 编译配置方式与 SDK 的 foo_sample 完全一致，按原工程与配置直接编译即可。
 
 ![](./asset/image.png)
